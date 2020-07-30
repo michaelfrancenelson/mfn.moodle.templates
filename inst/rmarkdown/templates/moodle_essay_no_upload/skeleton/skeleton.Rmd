@@ -1,15 +1,28 @@
 ---
 title: "Essay without upload"
-output:
-  html_document:
-    css: !expr here::here("formatting", "css", "moodle_questions.css")
+# output:
+  # html_document:
+    # css: !expr here::here("formatting", "css", "moodle_questions.css")
 ---
+
+<!-- Fill in the following code to include an image file: -->
+```{r, echo = FALSE, results = "hide", eval=FALSE}
+include_supplement(
+  "image_file.png",
+  dir = here::here(),
+  recursive = TRUE)
+```
 
 
 
 
 Question
 ========
+
+```{r CSS, echo = FALSE, results = "asis"}
+writeLines(readLines(here::here("formatting", "css", "moodle_questions.css")))
+```
+
 
 This template creates an essay question with:
 - required essay answer
