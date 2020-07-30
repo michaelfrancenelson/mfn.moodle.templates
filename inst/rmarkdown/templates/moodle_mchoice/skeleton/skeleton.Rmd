@@ -1,5 +1,8 @@
 ---
 title: "Choice with multiple correct answers"
+output:
+  html_document:
+    css: !expr here::here("formatting", "css", "moodle_questions.css")
 ---
 
 

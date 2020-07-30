@@ -1,5 +1,8 @@
 ---
 title: "Essay with file upload"
+output:
+  html_document:
+    css: !expr here::here("formatting", "css", "moodle_questions.css")
 ---
 
 
