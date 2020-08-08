@@ -1,12 +1,15 @@
 ---
 title: "Essay without upload"
-# output:
-  # html_document:
-    # css: !expr here::here("formatting", "css", "moodle_questions.css")
 ---
 
+
+```{r, echo = FALSE, results = "hide"} 
+source(here::here("formatting", "functions", "moodle_template_funs.R"))
+```
+
+
 <!-- Fill in the following code to include an image file: -->
-```{r, echo = FALSE, results = "hide", eval=FALSE}
+```{r, echo = FALSE, results = "hide", eval=FALSE} 
 include_supplement(
   "image_file.png",
   dir = here::here(),
