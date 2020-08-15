@@ -1,33 +1,36 @@
 ---
-title: "Essay with file upload"
+title: "File upload only"
+output:  
+  html_document:
+    theme: readable
+    css: !expr here::here("formatting", "css", "styles.css")
+    toc: TRUE
+    toc_float: TRUE
 ---
 
 
-
 ```{r, echo = FALSE, results = "hide"} 
-source(here::here("formatting", "functions", "moodle_template_funs.R"))
+source(here::here("formatting", "functions", "rmd_functions.R"))
+
+# include_supplement(
+#     "",
+#   dir = here::here(),
+  # recursive = TRUE)
 ```
 
-<!-- Fill in the following code to include an image file: -->
-```{r, echo = FALSE, results = "hide", eval=FALSE}
-include_supplement(
-  "image_file.png",
-  dir = here::here(),
-  recursive = TRUE)
-```
-
+![](`r system.file("img", "Rlogo.png", package="png")`){width=65%}
 
 Question
 ========
 
 ```{r CSS, echo = FALSE, results = "asis"}
-writeLines(readLines(here::here("formatting", "css", "moodle_questions.css")))
+cat(readLines(here::here("formatting", "css", "styles.css")))
 ```
 
 
 
+
 This template creates an essay question with:
-- required essay answer
 - one required flie upload
 
 
@@ -46,7 +49,7 @@ exsolution: nil
 exname: exam name
 exsection: section name
 exextra[essay,logical]: TRUE
-exextra[essay_format,character]: editor
+exextra[essay_format,character]: noinline
 exextra[essay_required,logical]: FALSE
 exextra[essay_fieldlines,numeric]: 5
 exextra[essay_attachments,numeric]: 1
